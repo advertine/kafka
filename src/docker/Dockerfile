@@ -16,7 +16,7 @@
 FROM ubuntu:14.04
 
 # Enable apt-proxy if present
-COPY .docker/apt-proxy* /tmp/apt-proxy
+# COPY .docker/apt-proxy* /tmp/apt-proxy
 RUN \
   if [ -f "/tmp/apt-proxy" ]; then \
     APT_PROXY=$(cat "/tmp/apt-proxy"); \
